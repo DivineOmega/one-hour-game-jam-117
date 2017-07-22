@@ -36,14 +36,13 @@ function _update()
   ent.update()
  end
  
- if (score>highscore) then
-  highscore = score
- end
- 
  timer = timer - 0.025
  
  if (timer<0) then
   sfx(1)
+  if (score>highscore) then
+   highscore = score
+  end
   _init()
  end
 end
